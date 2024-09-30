@@ -1,0 +1,26 @@
+# General
+python-dotenv==1.0.1
+jupyter
+
+# Website
+mkdocs-material
+mkdocs-rss-plugin
+
+# Hugging Face
+huggingface-hub
+
+# Azure SDK for Python
+# See: https://learn.microsoft.com/python/api/overview/azure/ai-ml-readme?view=azure-python
+azure-ai-ml
+azure-identity==1.17.1
+azure-ai-inference
+
+# Azure Auth Setup
+# See: https://learn.microsoft.com/azure/machine-learning/how-to-setup-authentication?view=azureml-api-2&tabs=sdk
+
+# Hugging Face Samples on Azure
+# See: https://github.com/Azure/azureml-examples/tree/main/sdk/python/foundation-models/huggingface/inference
+
+
+# Prompty
+prompty[azure]
