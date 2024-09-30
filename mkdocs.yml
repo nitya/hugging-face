@@ -16,43 +16,96 @@
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
 # ---------------------------------
 
-site_name: "HuggingFace Code-First"
+# START  ...............................................
+
+# Project information .........................................
+site_name: Hugging Face For Developers
+site_url: https://nitya.github.io/hugging-face/
+site_author: Nitya Narasimhan
+site_description: >-
+  Exploring Hugging Face from a developer perspective - from rapid prototyping (using Hugging Face Hub) to deployment on Azure (using Hugging Face Models from Azure AI Model Catalog) - using a code-first approach with Python, Visual Studio Code, and GitHub tooling.
+
+# Repository ..................................................
+repo_name: nitya/hugging-face
+repo_url: https://github.com/nitya/hugging-face
+
+# Copyright ...................................................
+copyright: >
+  Copyright &copy; 2024 - present Nitya Narasimhan
+  <br/>🍪 | <a href="#__consent">Change cookie settings</a>
+
+# Configuration ...............................................
 theme:
   name: material
-
   font:
-    code: Roboto Mono #Monospaced
-    text: Roboto #Regular
+    code: Roboto Mono  #Monospaced
+    text: Roboto       #Regular
+  logo: assets/logo.svg
+  language: en
 
-  logo: img/logo.svg
-
-  palette: 
-    # Light Mode Scheme (Default)
-    - scheme: default  
-      primary: blue # black
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: amber
       accent: pink
       toggle:
-        icon: material/brightness-2
-        name: Switch to dark mode
-    # Light Mode Scheme
-    - scheme: slate 
-      primary: deep purple # amber
-      accent: cyan
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: deep purple
+      accent: pink
       toggle:
         icon: material/brightness-7
-        name: Switch to light mode
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: amber
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference 
 
-# Configure Features
-features:
-  - navigation.tabs
+  features:
+    - navigation.instant
+    - navigation.instant.progress   # load progress indicator
+    - navigation.tracking           # tracks anchor tags in URL
+    - navigation.tabs               # tabbed on desktop, single in mobile    
+    - navigation.tabs.sticky        # tabs stick when scrolling downtheme:
+    - navigation.path               # add breadcrumbs
+    - navigation.indexes            # default index.md in folder is section page
+    - navigation.top
+    - toc.follow
+    - navigation.footer
 
-# Configure Navigation 
-nav:
-  - index.md
-  - Blog:
-    - blog/index.md
 
-# Configure Plugins
+# Navigation  ...............................................
+#nav:
+#  - index.md
+#  - Recent Posts:
+#    - blog/index.md
+
+# Extras  ...............................................
+extra:
+  generator: false
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - reject
+      - manage 
+  analytics:
+    provider: google
+    property: G-XXXXXX   # TODO
+
+# Plugins  ...............................................
 plugins:
   - blog
   - rss:
@@ -62,16 +115,25 @@ plugins:
       categories:
         - categories
         - tags
+  - search
 
-# Configure Extensions
+# Extensions  ...............................................
 markdown_extensions:
+  - abbr
   - admonition
+  - attr_list
+  - toc:
+      permalink: true
+      toc_depth: 2
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+  - pymdownx.snippets
+# END  ...............................................
