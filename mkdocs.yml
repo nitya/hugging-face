@@ -54,7 +54,7 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
-      primary: deep purple
+      primary: teal
       accent: pink
       toggle:
         icon: material/brightness-7

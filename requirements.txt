@@ -8,6 +8,7 @@ mkdocs-rss-plugin
 
 # Hugging Face
 huggingface-hub
+datasets
 
 # Azure SDK for Python
 # See: https://learn.microsoft.com/python/api/overview/azure/ai-ml-readme?view=azure-python
