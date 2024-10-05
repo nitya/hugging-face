@@ -79,13 +79,18 @@ theme:
     - navigation.top
     - toc.follow
     - navigation.footer
+    - content.code.copy
 
 
 # Navigation  ...............................................
-#nav:
+nav:
 #  - index.md
 #  - Recent Posts:
 #    - blog/index.md
+
+
+
+
 
 # Extras  ...............................................
 extra:
@@ -104,6 +109,14 @@ extra:
   analytics:
     provider: google
     property: G-XXXXXX   # TODO
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/nitya
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/nitya
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/nityan
+
 
 # Plugins  ...............................................
 plugins:
