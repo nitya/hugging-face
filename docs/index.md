@@ -1,4 +1,4 @@
-# Welcome!
+# Welcome
 
 This is a website and blog for documenting my learning journey with Hugging Face models, tools and applications - with three main objectives:
 
